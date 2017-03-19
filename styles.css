@@ -60,7 +60,8 @@
         height: 32px;        
     }
 
-    .navbar-link.active {
+    .navbar-link:hover, .navbar-link.active {
+        transition: 0.3s color;
         color: #33C3F0;
     }
     
