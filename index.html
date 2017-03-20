@@ -50,17 +50,37 @@
         </nav>
 
         <!-- home -->
-        <A id="home" />
+        <a name="#" id="home"></a>
 
-        <div class="container cover-image">
-            
+        <div class="cover-image">
+            <div id="cover">
+                <h1 class="cover-heading">Ayman Ahmed</h1>
+                <p class="cover-desc">High school software developer</p>
+            </div>
         </div>
-            
+        <i class="fa fa-angle-down fa-4x arrow-down" aria-hidden="true"></i>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ayy
         <!-- Scripts -->
         <script
             src="https://code.jquery.com/jquery-3.2.0.min.js"
             integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
             crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+         //animate up on startup
+         $(function () {
+             $("#cover")
+                 .animate({
+                     'opacity': 1,
+                     'padding-bottom': '2.5%'
+                 },{ duration: 500, queue: false });
+             $(".arrow-down")
+                 .animate({
+                     'opacity': 1,
+                     'bottom': '2.5%'
+                 }, { duration: 250, queue: false });
+         });
+        </script>
     </body>
     
 </html>
