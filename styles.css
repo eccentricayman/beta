@@ -17,7 +17,7 @@ body {
     padding: 0;
     width: auto;
     height: 100vh;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5),  transparent), url(images/cover.png) no-repeat center 0 fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4), transparent), url(images/cover.png) no-repeat center 0 fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -26,7 +26,7 @@ body {
 
 .cover-heading {
     text-align: center;
-    margin-left: 50px;
+    margin-left: 0;
     font-size: 6rem;
     letter-spacing: 10px;
     text-transform: uppercase;
@@ -35,16 +35,26 @@ body {
 .cover-desc {
     text-align: center;
     font-weight: 300;
-    margin-left: 50px;
+    margin-left: 0;
     font-size: 2.4rem;
 }
 
 @media (min-width: 768px) {
     .cover-image {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5),  transparent), url(images/cover.png) no-repeat center 0 fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         background-position: 300px 0;
     }
 
+    .cover-heading {
+        margin-left: 50px;
+    }
+    
     .cover-desc {
+        margin-left: 50px;
         text-align: left;
     }
 }
