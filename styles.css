@@ -17,7 +17,7 @@ body {
     padding: 0;
     width: auto;
     height: 100vh;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5),  transparent), url(images/cover.png) no-repeat center center fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5),  transparent), url(images/cover.png) no-repeat center 0 fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -39,6 +39,16 @@ body {
     font-size: 2.4rem;
 }
 
+@media (min-width: 768px) {
+    .cover-image {
+        background-position: 300px 0;
+    }
+
+    .cover-desc {
+        text-align: left;
+    }
+}
+
 #cover {
     /* for cover transition */
     padding-bottom: 0;
@@ -54,7 +64,7 @@ body {
     transition: 0.5s all;
     /* for the transition */
     opacity: 0;
-    bottom: 0%;
+    bottom: 0;
 }
 
 .arrow-down:hover {
@@ -64,7 +74,7 @@ body {
 }
 
 /* Larger than tablet */
-@media only screen and (min-width: 1080px) {
+@media (min-width: 768px) {
 
     /* Navbar */
     .navbar + .docs-section {
@@ -130,12 +140,5 @@ body {
         transition: 0.3s color;
         color: #00BFA5;
     }
-
-    .cover-image {
-        background-position: 300px 0;
-    }
-
-    .cover-desc {
-        text-align: left;
-    }
 }
+
