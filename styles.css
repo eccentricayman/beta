@@ -41,11 +41,11 @@ body {
 
 @media (min-width: 768px) {
     .cover-image {
-        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5),  transparent), url(images/cover.png) no-repeat center 0 fixed;
+        /*background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5),  transparent), url(images/cover.png) no-repeat center 0 fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;
+        background-size: cover;*/
         background-position: 300px 0;
     }
 
