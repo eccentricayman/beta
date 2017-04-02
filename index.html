@@ -61,11 +61,68 @@
         <i class="fa fa-angle-down fa-4x arrow-down" aria-hidden="true"></i>
         
         <div class="section" id="about">
-            
+            <h1 class="heading">About Me</h1>
+            <div class="terminal-window">
+                <header>
+                    <div class="button green"></div>
+                    <div class="button yellow"></div>
+                    <div class="button red"></div>
+                </header>
+                <section class="terminal">
+                    <div class="history"></div>
+                    <span>>>> </span>
+                    <span class="import">import</span>
+                    <span> about</span>
+                    
+                    <br><br>
+
+                    <span>>>> </span>
+                    <span class="function">print </span><span>greeting</span>
+                    <br>
+                    <span>Hi, I'm Ayman.</span>
+                        
+                    <br><br>
+                    
+                    <span>>>> </span>
+                    <span>education</span>
+                    <br>
+                    
+                    <span>{</span>
+                    <br>
+                    <span class="string">&emsp;&emsp;'High School'</span><span>: </span>
+                    <span class="string">'Stuyvesant HS'</span><span>,</span>
+                    <br>
+                    <span class="string">&emsp;&emsp;'Focus'</span><span>: </span>
+                    <span class="string">'Computer Science'</span><span>,</span>
+                    <br>
+                    <span class="string">&emsp;&emsp;'Graduation'</span><span>: </span>
+                    <span class="string">'June 2017'</span>
+                    <br>
+                    <span>}</span>
+
+                    <br><br>
+                    
+                    <span>>>> </span>
+                    <span>interests</span>
+                    <br>
+                    
+                    <span>[</span>
+                    <span class="string">'coding'</span><span>, </span>
+                    <span class="string">'computer hardware'</span><span>, </span>
+                    <span class="string">'gaming'</span>
+                    <span>]</span>
+                    
+                    <br>
+                </section>
+            </div>
         </div>
 
-        <div class="section" id="skills">
+        <!-- <hr style="margin: 0 ; width: 75% ; margin-left: 12.5%">  -->
 
+        <div class="section" id="skills">
+            <br><br><br><br>
+            <h1 class="heading">Skills</h1>
+            
         </div>
         
         <div class="footer-wrapper" id="contact">
@@ -115,7 +172,7 @@
          //arrow down scrolls
          $(".arrow-down").click( function() {
              $('html, body').animate( {
-                 scrollTop: $("#about").offset().top + 1
+                 scrollTop: $("#about").offset().top
              }, 1000);
          });
         </script>
@@ -124,7 +181,7 @@
          //make navbar come down
          if ($(window).width() >= 750) {
              window.onscroll = function(e) {
-                 var cover = $(".cover-image").offset().top + $(".cover-image").outerHeight();
+                 var cover = $("#home").offset().top + $("#home").outerHeight();
                  if ($(window).scrollTop() > cover) {
                      $("#nav").slideDown("fast");
                  }
