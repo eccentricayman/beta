@@ -39,23 +39,19 @@
 
     <body>
         <!-- navbar -->
-        <nav class="navbar">
+        <nav class="navbar" id="nav">
             <div class="container">
                 <ul class="navbar-list">
-                    <li class="navbar-item navbar-image-item"><a class="navbar-link navbar-image" href="#"><img class="navbar-image-link" src="images/logo.png" /></a></li>
+                    <li class="navbar-item navbar-image-item"><a class="navbar-link navbar-image" href="#home"><img class="navbar-image-link" src="images/logo.png" /></a></li>
                     <!-- Reverse order bc I'm too lazy to fix the float -->
-                    <li class="navbar-item"><a class="navbar-link" href="#contact">Contact</a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="#skills">Skills</a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>          
+                    <li class="navbar-item"><a class="navbar-link sliding-middle-out" href="#contact" style="margin-right: 0">Contact</a></li>
+                    <li class="navbar-item"><a class="navbar-link sliding-middle-out" href="#projects">Projects</a></li>
+                    <li class="navbar-item"><a class="navbar-link sliding-middle-out" href="#skills">Skills</a></li>
                 </ul>
             </div>
         </nav>
 
-        <!-- home -->
-        <a name="#" id="home"></a>
-
-        <div class="cover-image">
+        <div class="cover-image" id="home">
             <div id="cover">
                 <h1 class="cover-heading">Ayman Ahmed</h1>
                 <p class="cover-desc">High school software developer</p>
@@ -67,15 +63,25 @@
 
         </div>
         
-        <div class="footer-wrapper">
+        <div class="footer-wrapper" id="contact">
+
             <div class="row footer">
+                
                 <div class="six columns footer-left">
-                    ayy
+                    <p><i class="fa fa-envelope" style="padding-right: 1.5%"></i>aahmed3@stuy.edu</p>
+                    <br>
+                    <p><i class="fa fa-phone" style="padding-right: 1.5%"></i>(646)-289-0275</p> 
                 </div>
+                
                 <div class="six columns footer-right">
-                    ayy
+                    <a class="footer-link" href="https://github.com/eccentricayman">eccentricayman<i class="fa fa-github" style="padding-left: 1.5%"></i></a>
+                    <br><br>
+                    <a class="footer-link" href="resume.pdf">Resum&eacute;<i class="fa fa-briefcase" style="padding-left: 1.5%"></i></a>
                 </div>
+                
             </div>
+            <div class="copyright"><p>Made with <i class="fa fa-heart"></i> by Ayman Ahmed<p></div>
+                
         </div>
         
         <!-- Scripts -->
@@ -85,7 +91,7 @@
             crossorigin="anonymous"></script>
 
         <script type="text/javascript">
-         //animate up on startup
+         //cover page fade in
          $(function () {
              $("#cover")
                  .animate({
@@ -101,13 +107,43 @@
         </script>
 
         <script type="text/javascript">
+         //arrow down scrolls
          $(".arrow-down").click(function() {
              $('html, body').animate({
                  scrollTop: $("#skills").offset().top
              }, 1000);
          });
         </script>
-        
+
+        <script type="text/javascript">
+         //make navbar come down
+         if ($(window).width() >= 750) {
+             window.onscroll = function(e) {
+                 var cover = $(".cover-image").offset().top + $(".cover-image").outerHeight();
+                 if ($(window).scrollTop() > cover) {
+                     $("#nav").slideDown("fast");
+                 }
+                 else {
+                     $("#nav").slideUp("fast");
+                 }
+             };
+         }
+        </script>
+
+
+        <script type="text/javascript">
+         //make links smooth scroll
+         var $root = $('html, body');
+         $('a').click(function() {
+             var href = $.attr(this, 'href');
+             $root.animate({
+             scrollTop: $(href).offset().top
+         }, 500, function () {
+             window.location.hash = href;
+         });
+             return false;
+         });
+        </script>
     </body>
     
 </html>
