@@ -12,6 +12,7 @@ body {
 
 .section {
     width: 100%;
+    min-height: 100vh;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -154,7 +155,7 @@ body {
   background: #E75448;
 }
 
-.terminal-window section.terminal {
+.terminal-window div.terminal {
   color: white;
   font-family: Monaco, Menlo, "Consolas", "Courier New", "Courier";
   font-size: 11pt;
@@ -165,12 +166,14 @@ body {
   width: 100%;
   top: 30px;
   bottom: 0;
+  height: auto;
   overflow: auto;
+  flex: 1 1 auto;
   border-radius: 0 0 10px 10px;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 22px 70px 4px rgba(0,0,0,0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
-.terminal-window section.terminal .typed-cursor {
+.terminal-window div.terminal .typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
@@ -209,9 +212,9 @@ span.function {
     color: #63B1FC;
 }
 
-
-
-
+span {
+    display: inline-block;
+}
 
 .footer-wrapper {
     height: 40vh;

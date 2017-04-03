@@ -68,8 +68,7 @@
                     <div class="button yellow"></div>
                     <div class="button red"></div>
                 </header>
-                <section class="terminal">
-                    <div class="history"></div>
+                <div class="terminal">
                     <span>>>> </span>
                     <span class="import">import</span>
                     <span> about</span>
@@ -77,7 +76,8 @@
                     <br><br>
 
                     <span>>>> </span>
-                    <span class="function">print </span><span>greeting</span>
+                    <span class="function">print </span>
+                    <span> greeting</span>
                     <br>
                     <span>Hi, I'm Ayman.</span>
                         
@@ -109,11 +109,14 @@
                     <span>[</span>
                     <span class="string">'coding'</span><span>, </span>
                     <span class="string">'computer hardware'</span><span>, </span>
-                    <span class="string">'gaming'</span>
+                    <span class="string">'gaming'</span><span>, </span>
+                    <span class="string">'glowstringing'</span><span>, </span>
+                    <span class="string">'swimming'</span><span>, </span>
+                    <span class="string">'reading'</span>
                     <span>]</span>
                     
                     <br>
-                </section>
+                </div>
             </div>
         </div>
 
@@ -179,17 +182,20 @@
 
         <script type="text/javascript">
          //make navbar come down
-         if ($(window).width() >= 750) {
-             window.onscroll = function(e) {
-                 var cover = $("#home").offset().top + $("#home").outerHeight();
-                 if ($(window).scrollTop() > cover) {
-                     $("#nav").slideDown("fast");
-                 }
-                 else {
-                     $("#nav").slideUp("fast");
-                 }
-             };
+         function navbarToggle() {
+             if ($(window).width() >= 750) {
+                 window.onscroll = function(e) {
+                     var cover = $("#home").offset().top + $("#home").outerHeight();
+                     if ($(window).scrollTop() > cover) {
+                         $("#nav").slideDown("fast");
+                     }
+                     else {
+                         $("#nav").slideUp("fast");
+                     }
+                 };
+             }
          }
+         window.addEventListener('resize', navbarToggle());
         </script>
 
 
