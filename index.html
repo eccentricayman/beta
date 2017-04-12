@@ -121,11 +121,23 @@
         </div>
 
         <!-- <hr style="margin: 0 ; width: 75% ; margin-left: 12.5%">  -->
+        <div class="separator"></div>
 
         <div class="section" id="skills">
-            <br><br><br><br>
             <h1 class="heading">Skills</h1>
-            
+            <br>
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="section" id="projects">
+            <h1 class="heading">Projects</h1>
+            <br>
         </div>
         
         <div class="footer-wrapper" id="contact">
@@ -145,7 +157,7 @@
                 </div>
                 
             </div>
-            <div class="copyright"><p>Made with <i class="fa fa-heart"></i> by Ayman Ahmed<p></div>
+            <div class="copyright"><p>Made with <i class="fa fa-heart"></i> by Ayman Ahmed</p></div>
                 
         </div>
         
@@ -195,7 +207,8 @@
                  };
              }
          }
-         window.addEventListener('resize', navbarToggle());
+         navbarToggle();
+         window.addEventListener('resize', navbarToggle);
         </script>
 
 
@@ -204,11 +217,18 @@
          var $root = $('html, body');
          $('a').click(function() {
              var href = $.attr(this, 'href');
-             $root.animate({
-             scrollTop: $(href).offset().top
-         }, 500, function () {
-             window.location.hash = href;
-         });
+             if (href == "#about") {
+                 $root.animate({
+                     scrollTop: $(href).offset().top
+                 }, 500, function () {
+                     window.location.hash = href;
+                 });
+             }
+             else {
+                 $root.animate({
+                     scrollTop: $(href).offset().top - 104
+                 })
+             }
              return false;
          });
         </script>
