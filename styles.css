@@ -298,13 +298,23 @@ span {
 
 .skill-container > h3 {
     position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: 5%;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     letter-spacing: 2px;
     font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.skill-container > img {
     padding: 0;
     margin: 0;
-    text-transform: uppercase;
+    width: 100%;
+    height: auto;
 }
 
 /* Larger than tablet */
@@ -378,6 +388,13 @@ span {
 
     .skill-container {
         margin-bottom: 0;
+    }
+
+    .skill-container > img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
     }
     
     .footer-left {
