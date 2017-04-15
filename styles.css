@@ -285,18 +285,41 @@ span {
     margin: 0;
 }
 
-.skill-container {
+.row, .row-omega {
+    padding-bottom: 0;
+}
+
+.skill-section-heading {
+    color: #888888;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0;
+    padding-top: 15%;
+}
+
+.alpha.skill {
+    margin-bottom: 0;
+}
+
+.skill {
     /* this is from the one column */
     padding: 2.5%;
-    padding-bottom: 22%;
+    padding-bottom: 13.3333333333%;
     position: relative;
     height: 100%;
     text-align: center;
-    border: 2px solid #E1E1E1;
+    border: 2px solid #D1D1D1;
     margin-bottom: 10%;
+    /* mobile 2 column */
+    width: 45%;
+    margin-right: 5%;
 }
 
-.skill-container > h3 {
+.skill > h3 {
     position: absolute;
     padding: 0;
     margin: 0;
@@ -306,14 +329,14 @@ span {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     letter-spacing: 2px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
-.skill-container > img {
+.skill > img {
     padding: 0;
-    margin: 0;
-    width: 100%;
+    margin: 10% auto;
+    width: 70%;
     height: auto;
 }
 
@@ -386,11 +409,38 @@ span {
         width: 50%;
     }
 
-    .skill-container {
-        margin-bottom: 0;
+    .row {
+        padding-bottom: 2.5%;
     }
 
-    .skill-container > img {
+    .skill-section-heading {
+        font-size: 1.5rem;
+        position: absolute;
+        left: -16.75%;
+        margin-top: 6.6666666666%;
+        border: 1px solid #C1C1C1;
+        padding: 0.5%;
+    }
+
+    .skill-container > h4 {
+        text-align: left;
+    }
+    
+    .skill-container > hr {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-top: 1%;
+        margin-bottom: 2.5%;
+    }
+
+    .skill {
+        width: 100%;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    .skill > img {
         position: absolute;
         left: 0;
         right: 0;
@@ -407,6 +457,7 @@ span {
 
     .copyright {
         padding-top: 0;
+        padding-bottom: 2%;
     }
 
 }
