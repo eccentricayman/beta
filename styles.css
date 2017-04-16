@@ -85,7 +85,7 @@ body {
 }
 
 .arrow-down {
-    color: #A5A5A5;
+    color: #707070;
     position: absolute;
     left: 47.5%;
     z-index: 999;
@@ -319,6 +319,11 @@ span {
     margin-right: 5%;
 }
 
+/* .skill:hover { */
+/*     transition: 0.3s border; */
+/*     border: 2px solid #888888; */
+/* } */
+ 
 .skill > h3 {
     position: absolute;
     padding: 0;
@@ -409,6 +414,10 @@ span {
         width: 50%;
     }
 
+    #skills > h1.heading {
+        padding-bottom: 0.5%;
+    }
+    
     .row {
         padding-bottom: 2.5%;
     }
