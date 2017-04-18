@@ -364,15 +364,37 @@ span {
 
 .project-row-container {
     height: 50vh;
+    width: 85%;
+    margin: 0 auto;
 }
 
 .project-row-container > .row {
+    min-height: 50vh;
     height: 100%;
+    width: 100%;
 }
 
 .project-card {
-    border: 1px solid black;
+    filter: grayscale(1);
+    border: 0.25px solid #E1E1E1;
     height: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-bottom: 10%;
+}
+
+.project-card:hover {
+    filter: grayscale(0);
+    transform: scale(1.025);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s;
+}
+
+.project-card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 /* Larger than tablet */

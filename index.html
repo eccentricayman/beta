@@ -125,6 +125,7 @@
 
         <div class="section" id="skills">
             <h1 class="heading">Skills</h1>
+            <br>
             <div class="skill-container">
                 <h4 class="skill-section-heading even-row-skill-section-heading">Languages</h4>
                 <div class="container">
@@ -155,6 +156,7 @@
                         </div>
                     </div>
                 </div>
+                <br>
                 
                 <h4 class="skill-section-heading">Tools</h4>
                 <div class="container">
@@ -182,6 +184,8 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                
                 <h4 class="skill-section-heading even-row-skill-section-heading">Experience</h4>
                 <div class="container">
                     <div class="row">
@@ -218,13 +222,15 @@
 
         <div class="section" id="projects">
             <h1 class="heading">Projects</h1>
-            <br>
-            <div class="container project-row-container">
+            <br><br>
+            <div class="project-row-container">
                 <div class="row">
                     <div class="six columns alpha project-card">
+                        <img src="images/project1.png" alt="stuyvesant-student-union" />
                     </div>
 
                     <div class="six columns omega project-card">
+                        <img src="images/project2.png" alt="stuyvesant-sophomore-caucus" />
                     </div>
                 </div>
             </div>
@@ -252,10 +258,7 @@
         </div>
         
         <!-- Scripts -->
-        <script
-            src="https://code.jquery.com/jquery-3.2.0.min.js"
-            integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
-            crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <script type="text/javascript">
          //cover page fade in
@@ -330,7 +333,7 @@
              }
              else {
                  $root.animate({
-                     scrollTop: $(href).offset().top - 70
+                     scrollTop: $(href).offset().top - 100
                  })
              }
              return false;
