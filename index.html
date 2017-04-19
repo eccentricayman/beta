@@ -17,24 +17,27 @@
         <link
             rel="stylesheet"
             type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+            media="none"
+            onload="if(media!='all')media='all'">
 
         <!-- font awesome -->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 
         <!-- google fonts -->
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Nunito:300,700|Raleway:300,400,700">
+            href="https://fonts.googleapis.com/css?family=Nunito:300,700|Raleway:300,400,700"
+            media="none"
+            onload="if(media!='all')media='all'">
 
         <!-- custom styles -->
         <link
             rel="stylesheet"
             type="text/css"
-            href="styles.css">
+            href="styles.css"
+            media="none"
+            onload="if(media!='all')media='all'">
     </head>
 
     <body>
@@ -273,7 +276,7 @@
 
         <script type="text/javascript">
          //cover page fade in
-         $(function () {
+         window.onload = function () {
              $("#cover")
                  .animate({
                      'opacity': 1,
@@ -284,7 +287,7 @@
                      'opacity': 1,
                      'bottom': '2.5%'
                  }, { duration: 250, queue: false });
-         });
+         };
         </script>
 
         <script type="text/javascript">
