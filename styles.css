@@ -375,7 +375,7 @@ span {
 }
 
 .project-card {
-    filter: grayscale(1);
+    filter: grayscale(0.9);
     border: 0.25px solid #E1E1E1;
     height: 100%;
     overflow: hidden;
@@ -384,7 +384,7 @@ span {
 }
 
 .project-card:hover {
-    filter: grayscale(0);
+    filter: grayscale(0.2);
     transform: scale(1.025);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 0.5s;
