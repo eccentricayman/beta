@@ -22,7 +22,12 @@
             onload="if(media!='all')media='all'">
 
         <!-- font awesome -->
-        <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="css/font-awesome.min.css"
+            media="none"
+            onload="if(media!='all')media='all'">
 
         <!-- google fonts -->
         <link
@@ -35,7 +40,7 @@
         <link
             rel="stylesheet"
             type="text/css"
-            href="styles.css"
+            href="css/styles.css"
             media="none"
             onload="if(media!='all')media='all'">
     </head>
@@ -229,22 +234,22 @@
             <div class="project-row-container">
                 <div class="row">
                     <div class="six columns alpha project-card">
-                        <img src="images/project1.png" alt="stuyvesant-student-union" />
+                        <img src="images/project1-thumbnail.png" id="project1" alt="stuyvesant-student-union" />
                     </div>
 
                     <div class="six columns omega project-card">
-                        <img src="images/project2.png" alt="stuyvesant-sophomore-caucus" />
+                        <img src="images/project2-thumbnail.png" id="project2" alt="stuyvesant-sophomore-caucus" />
                     </div>
                 </div>
             </div>
             <div class="project-row-container">
                 <div class="row">
                     <div class="six columns alpha project-card">
-                        <img src="images/project3.png" alt="millenium-falcon" />
+                        <img src="images/project3-thumbnail.png" id="project3" alt="millenium-falcon" />
                     </div>
 
                     <div class="six columns omega project-card">
-                        <img src="images/project4.png" alt="the-daily-greez" />
+                        <img src="images/project4-thumbnail.png" id="project4" alt="the-daily-greez" />
                     </div>
                 </div>
             </div>
@@ -352,6 +357,24 @@
              }
              return false;
          });
+        </script>
+
+        <script type="text/javascript">
+         function cardGrow(e) {
+             this.css("position", "absolute");
+             this.css("top", 0);
+             this.css("left", 0);
+             this.css("right", 0);
+             this.css("bottom", 0);
+             if ($(window).width() > $(window).height() && this.css("width") > this.css("height")) {
+                 this.css("width", "100vw");
+                 this.css("height", "auto");
+             }
+             
+             this.off("click");
+             this.on("click", cardShrink);
+         }
+         $(".project-card").on("click", cardGrow);
         </script>
     </body>
     

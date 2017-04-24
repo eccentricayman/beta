@@ -31,7 +31,7 @@ body {
     width: auto;
     height: 100vh;
     /*background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4), transparent), url(images/cover.png) no-repeat center 0 fixed;*/
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url(images/cover.png) no-repeat center 0 fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url(../images/cover.png) no-repeat center 0 fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,6 +40,7 @@ body {
 
 .cover-heading {
     font-family: 'Raleway', sans-serif;
+    font-weight: 300;
     text-align: center;
     margin-left: 0;
     font-size: 6rem;
@@ -90,14 +91,14 @@ body {
     left: 47.5%;
     z-index: 999;
     cursor: pointer;
-    transition: 0.5s all;
+    transition: 0.5s color, 0.5s transform;
     /* for the transition */
     opacity: 0;
     bottom: 0;
 }
 
 .arrow-down:hover {
-    transition: 0.5s all;
+    transition: 0.5s color, 0.5s transform;
     color: #404040;
     transform: translate(0, 15%);
 }
@@ -110,8 +111,9 @@ body {
 }
 
 .heading {
-    color: #6D6D6D;
+    color: #606060;
     display: block;
+    font-weight: 300;
     width: 100%;
     text-align: center;
     margin-bottom: 0;
@@ -329,7 +331,6 @@ span {
     position: relative;
     height: 100%;
     text-align: center;
-    border: 2px solid #D1D1D1;
     margin-bottom: 10%;
     /* mobile 2 column */
     width: 45%;
@@ -376,25 +377,21 @@ span {
 
 .project-card {
     filter: grayscale(0.9);
-    border: 0.25px solid #E1E1E1;
+    transition: filter 0.5s, transform 0.5s, box-shadow 0.5s;
+    margin-bottom: 10%;
     height: 100%;
     overflow: hidden;
-    transition: all 0.5s;
-    margin-bottom: 10%;
 }
 
 .project-card:hover {
     filter: grayscale(0.2);
     transform: scale(1.025);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 0.5s;
+    transition: filter 0.5s, transform 0.5s, box-shadow 0.5s;
 }
 
 .project-card > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
+
 }
 
 /* Larger than tablet */
