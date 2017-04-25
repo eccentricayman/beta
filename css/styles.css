@@ -228,6 +228,7 @@ span {
     background-color: #EEEEEE;
     font-size: 16px;
     padding: 5% 7.5% 0 7.5%;
+    color: rgb(65, 65, 65);
 }
 
 .footer-left {
@@ -244,8 +245,9 @@ span {
 }
 
 .footer-link {
-    color: #7D7D7D;
+    color: #777777;
     text-decoration: none;
+    transition: 0.5s color;
 }
 
 .footer-link:hover {
