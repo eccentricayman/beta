@@ -3,7 +3,7 @@ body {
     padding: 0;
     color: #404040;
     font-weight: 300;
-    font-family: 'Nunito', 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .navbar {
@@ -126,7 +126,7 @@ body {
     border-radius: 10px;
     margin: auto;
     position: relative;
-    margin-top: 0;
+    bottom: 0;
 }
 
 .terminal-window header {
