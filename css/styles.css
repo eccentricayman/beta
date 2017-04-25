@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     color: #404040;
-    font-weight: 300;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Avenir', sans-serif;
+    font-weight: normal;
 }
 
 .navbar {
@@ -226,7 +226,7 @@ span {
 
 .footer {
     background-color: #EEEEEE;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5% 7.5% 0 7.5%;
 }
 
@@ -246,7 +246,6 @@ span {
 .footer-link {
     color: #7D7D7D;
     text-decoration: none;
-    font-weight: 400;
 }
 
 .footer-link:hover {
