@@ -216,29 +216,25 @@
 
         <div class="section" id="projects">
 
-            <br><br>
-            <div class="project-row-container">
-                <div class="row">
-                    <div class="six columns alpha project-card">
-                        <img src="images/project1-thumbnail.png" id="project1" alt="stuyvesant-student-union" />
-                    </div>
-
-                    <div class="six columns omega project-card">
-                        <img src="images/project2-thumbnail.png" id="project2" alt="stuyvesant-sophomore-caucus" />
-                    </div>
+            <div class="row">
+                <div class="six columns">
+                    <img src="images/project1.png" id="project1" class="u-max-full-width" alt="stuyvesant-student-union" />
+                </div>
+                <div class="six columns">
+                    <img src="images/project2.png" id="project2" class="u-max-full-width" alt="stuyvesant-sophomore-caucus" />
                 </div>
             </div>
-            <div class="project-row-container">
-                <div class="row">
-                    <div class="six columns alpha project-card">
-                        <img src="images/project3-thumbnail.png" id="project3" alt="millenium-falcon" />
-                    </div>
 
-                    <div class="six columns omega project-card">
-                        <img src="images/project4-thumbnail.png" id="project4" alt="the-daily-greez" />
-                    </div>
+            <div class="row">
+                <div class="six columns">
+                    <img src="images/project3.png" id="project3" class="u-max-full-width project-half" alt="millenium-falcon" />
+                    <img src="images/project3.png" id="project3" class="u-max-full-width project-half omega" alt="millenium-falcon" />
+                </div>
+                <div class="six columns">
+                    <img src="images/project4.png" id="project4" class="u-max-full-width" alt="the-daily-greez" />
                 </div>
             </div>
+            
         </div>
         
         <div class="footer-wrapper" id="contact">
@@ -264,8 +260,6 @@
         
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js" async></script>
 
         <script type="text/javascript">
          //cover page fade in
@@ -348,22 +342,9 @@
         </script>
 
         <script type="text/javascript">
-         function cardGrow(e) {
-             this.css("position", "absolute");
-             this.css("top", 0);
-             this.css("left", 0);
-             this.css("right", 0);
-             this.css("bottom", 0);
-             if ($(window).width() > $(window).height() && this.css("width") > this.css("height")) {
-                 this.css("width", "100vw");
-                 this.css("height", "auto");
-             }
-             
-             this.off("click");
-             this.on("click", cardShrink);
-         }
-         $(".project-card").on("click", cardGrow);
+         
         </script>
+
     </body>
     
 </html>
