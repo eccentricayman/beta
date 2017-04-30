@@ -415,27 +415,28 @@
 
              image.style.padding = 0;
              image.style.margin = 0;
-             if (image.naturalWidth > image.naturalHeight) {
-                 image.style.width = "100%";
-                 image.style.height = "auto";
-             }
-             else {
-                 image.style.width = "auto";
-                 image.style.height = "100%";
-             }
+             image.style.width = "auto";
+             image.style.height = "auto";
              
-             //well over 9000
              div.style.zIndex = "1";
              div.style.position = "static";
-             div.style.padding = "10px";
-             if (this.previousElementSibling === null) {
+             if ($(this).hasClass("project-half")) {
+                 div.style.padding = 0;
+             }
+             else {
+                 div.style.padding = "10px";
+             }
+             
+             if (this.previousElementSibling === null || $(this).parent().hasClass("double-project")) {
                  div.style.marginLeft = 0;
              }
              else {
                  div.style.marginLeft = "4%";
              }
-             div.style.width = "48%";
-             div.style.height = "auto";
+             
+             div.style.width = "49%";
+             div.style.height = "initial";
+             div.style.alignSelf = "flex-start";
              $("body").removeClass("stop-scrolling");
              div.style.background = "none";
              
