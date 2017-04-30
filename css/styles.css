@@ -420,6 +420,16 @@ span {
     flex-flow: row wrap;
 }
 
+.project-half {
+    display: flex;
+    margin-bottom: 4%;
+    align-items: center;
+}
+
+.project-half.omega {
+    margin-bottom: 0;
+}
+
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
@@ -542,6 +552,7 @@ span {
     
     .project-half {
         width: 49%;
+        margin-bottom: 0;
         display: flex;
         align-self: flex-start;
     }
@@ -551,6 +562,7 @@ span {
     }
 
     .project-half.omega {
+        margin-bottom: 0;
         align-self: flex-end;
     }
 

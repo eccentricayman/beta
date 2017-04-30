@@ -373,13 +373,33 @@
 
              image.style.padding = 0;
              image.style.margin = "0 auto";
-             if (image.naturalWidth > image.naturalHeight) {
-                 image.style.width = "100%";
-                 image.style.height = "auto";
+             if ( $(window).width() > $(window).height()) {
+                 if (image.naturalWidth > image.naturalHeight) {
+                     image.style.width = "100%";
+                     image.style.height = "auto";
+                 }
+                 else if (image.naturalWidth < image.naturalHeight) {
+                     image.style.width = "auto";
+                     image.style.height = "100%";
+                 }
+                 else {
+                     image.style.width = "auto";
+                     image.style.height = "100%";
+                 }
              }
              else {
-                 image.style.width = "auto";
-                 image.style.height = "100%";
+                 if (image.naturalWidth > image.naturalHeight) {
+                     image.style.width = "100%";
+                     image.style.height = "auto";
+                 }
+                 else if (image.naturalWidth < image.naturalHeight) {
+                     image.style.width = "auto";
+                     image.style.height = "100%";
+                 }
+                 else {
+                     image.style.width = "100%";
+                     image.style.height = "auto";
+                 }
              }
              
              //well over 9000
@@ -422,20 +442,34 @@
              div.style.position = "static";
              if ($(this).hasClass("project-half")) {
                  div.style.padding = 0;
+                 if ($(window).width() > $(window).height()) {
+                     div.style.width = "49%";
+                 }
+                 else {
+                     div.style.width = "100%";
+                 }
              }
              else {
                  div.style.padding = "10px";
+                 if ($(window).width() > $(window).height()) {
+                     div.style.width = "48%";
+                 }
+                 else {
+                     div.style.width = "100%";
+                 }
              }
              
-             if (this.previousElementSibling === null || $(this).parent().hasClass("double-project")) {
+             if (this.previousElementSibling === null || $(this).parent().hasClass("double-project") || $(window).height() > $(window).width()) {
                  div.style.marginLeft = 0;
              }
              else {
                  div.style.marginLeft = "4%";
              }
-             
-             div.style.width = "49%";
+             if (this.previousElementSibling === null && $(this).parent().hasClass("double-project") && $(window).height() > $(window).width()) {
+                 div.style.marginBottom = "4%";
+             }
              div.style.height = "initial";
+             image.style.verticalAlign = "middle";
              div.style.alignSelf = "flex-start";
              $("body").removeClass("stop-scrolling");
              div.style.background = "none";
