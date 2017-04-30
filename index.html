@@ -217,20 +217,24 @@
         <div class="section" id="projects">
 
             <div class="row">
-                <div class="six columns">
+                <div class="six columns project">
                     <img src="images/project1.png" id="project1" class="u-max-full-width" alt="stuyvesant-student-union" />
                 </div>
-                <div class="six columns">
+                <div class="six columns project">
                     <img src="images/project2.png" id="project2" class="u-max-full-width" alt="stuyvesant-sophomore-caucus" />
                 </div>
             </div>
 
             <div class="row">
-                <div class="six columns">
-                    <img src="images/project3.png" id="project3" class="u-max-full-width project-half" alt="millenium-falcon" />
-                    <img src="images/project3.png" id="project3" class="u-max-full-width project-half omega" alt="millenium-falcon" />
+                <div class="six columns double-project">
+                    <div class="project project-half">
+                        <img src="images/project3.png" id="project3" class="u-max-full-width" alt="millenium-falcon" />
+                    </div>
+                    <div class="project project-half">
+                        <img src="images/project3.png" id="project3" class="u-max-full-width" alt="millenium-falcon" />
+                    </div>
                 </div>
-                <div class="six columns">
+                <div class="six columns project">
                     <img src="images/project4.png" id="project4" class="u-max-full-width" alt="the-daily-greez" />
                 </div>
             </div>
@@ -342,7 +346,107 @@
         </script>
 
         <script type="text/javascript">
-         
+         function getPosition(element) {
+             var xPosition = 0;
+             var yPosition = 0;
+             
+             while (element) {
+                 xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+                 yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+             element = element.offsetParent;
+             }
+             return {
+                 x: xPosition,
+                 y: yPosition
+             };
+         }
+
+         function makeLarge() {
+             var oldImage = jQuery.extend(true, {}, $(this));
+             var div = this;
+             var image = this.querySelector("img");
+             var label = this.querySelector(".label");
+             var rightSide = getPosition(div).x >= $(window).width() / 2
+
+             div.style.transition = "all 0.5s";
+             image.style.transition = "all 0.5s";
+
+             image.style.padding = 0;
+             image.style.margin = "0 auto";
+             if (image.naturalWidth > image.naturalHeight) {
+                 image.style.width = "100%";
+                 image.style.height = "auto";
+             }
+             else {
+                 image.style.width = "auto";
+                 image.style.height = "100%";
+             }
+             
+             //well over 9000
+             div.style.zIndex = "9999999";
+             div.style.position = "fixed";
+             div.style.padding = 0;
+             div.style.margin = 0;
+             div.style.width = "100%";
+             div.style.height = "100%";
+             div.style.top = 0;
+             //math to check left / right side
+             if (rightSide) {
+                 div.style.right = 0;
+             }
+             else {
+                 div.style.left = 0;
+             }
+             $("body").addClass("stop-scrolling");
+             div.style.background = "rgba(0, 0, 0, 0.75)";
+
+             this.removeEventListener("click", makeLarge);
+             this.addEventListener("click", makeSmall);
+         }
+
+         function makeSmall() {
+             var div = this;
+             var image = this.querySelector("img");
+             var label = this.querySelector(".label");
+             var rightSide = getPosition(div).x >= $(window).width() / 2
+
+             div.style.transition = "all 0.5s";
+             image.style.transition = "all 0.5s";
+
+             image.style.padding = 0;
+             image.style.margin = 0;
+             if (image.naturalWidth > image.naturalHeight) {
+                 image.style.width = "100%";
+                 image.style.height = "auto";
+             }
+             else {
+                 image.style.width = "auto";
+                 image.style.height = "100%";
+             }
+             
+             //well over 9000
+             div.style.zIndex = "1";
+             div.style.position = "static";
+             div.style.padding = "10px";
+             if (this.previousElementSibling === null) {
+                 div.style.marginLeft = 0;
+             }
+             else {
+                 div.style.marginLeft = "4%";
+             }
+             div.style.width = "48%";
+             div.style.height = "auto";
+             $("body").removeClass("stop-scrolling");
+             div.style.background = "none";
+             
+             this.removeEventListener("click", makeSmall);
+             this.addEventListener("click", makeLarge);
+         }
+
+         var projects = document.querySelectorAll('.project');
+         for (i = 0 ; i < projects.length ; i++) {
+             projects[i].addEventListener("click", makeLarge);
+         }
         </script>
 
     </body>

@@ -405,12 +405,24 @@ span {
 }
 
 #projects > .row > .six.columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 	padding: 10px;
     height: 100%;
 }
 
 #projects > .row > .six.columns > img {
     width: auto;
+}
+
+.double-project {
+    flex-flow: row wrap;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Larger than tablet */
@@ -529,12 +541,17 @@ span {
     }
     
     .project-half {
-        width: 49% !important;
-        float: left;
+        width: 49%;
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .project-half > img {
+        margin: 0 auto;
     }
 
     .project-half.omega {
-        float: right;
+        align-self: flex-end;
     }
 
     .footer-left {
