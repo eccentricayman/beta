@@ -439,7 +439,6 @@
              image.style.height = "auto";
              
              div.style.zIndex = "1";
-             div.style.position = "static";
              if ($(this).hasClass("project-half")) {
                  div.style.padding = 0;
                  if ($(window).width() > $(window).height()) {
@@ -458,6 +457,8 @@
                      div.style.width = "100%";
                  }
              }
+
+             div.style.position = "static";
              
              if (this.previousElementSibling === null || $(this).parent().hasClass("double-project") || $(window).height() > $(window).width()) {
                  div.style.marginLeft = 0;
@@ -468,6 +469,7 @@
              if (this.previousElementSibling === null && $(this).parent().hasClass("double-project") && $(window).height() > $(window).width()) {
                  div.style.marginBottom = "4%";
              }
+             
              div.style.height = "initial";
              image.style.verticalAlign = "middle";
              div.style.alignSelf = "flex-start";
