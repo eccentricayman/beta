@@ -430,6 +430,58 @@ span {
     margin-bottom: 0;
 }
 
+.label {
+    bottom: 15%;
+    text-align: right;
+    padding: 1%;
+    letter-spacing: normal;
+    font-family: 'Avenir', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: #EFEFEF;
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    border-right: none;
+    position: fixed;
+    right: -150%;
+}
+
+.label > p {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.label > h1 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: normal;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.label > a.button {
+    font-family: 'Avenir', sans-serif;
+    letter-spacing: normal;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 1%;
+    margin: 0;
+    border: 2px solid #404040;
+    border-radius: 0;
+    text-transform: none;
+    transition: all 0.3s;
+}
+
+.label > a.button:hover {
+    transition: all 0.3s;
+    background-color: #404040;
+    color: #FAFAFA;
+}
+
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
@@ -566,6 +618,10 @@ span {
         align-self: flex-end;
     }
 
+    .label {
+        right: -50%;
+    }
+    
     .footer-left {
         text-align: left;
     }
