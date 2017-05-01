@@ -431,55 +431,46 @@ span {
 }
 
 .label {
-    bottom: 15%;
-    text-align: right;
-    padding: 1%;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 1%;
     letter-spacing: normal;
     font-family: 'Avenir', sans-serif;
-    font-size: 14px;
     font-weight: 300;
-    background-color: #EFEFEF;
-    border: 2px solid rgba(0, 0, 0, 0.75);
-    border-right: none;
+    background-color: rgb(239, 239, 239);
     position: fixed;
-    right: -150%;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: none;
 }
 
+
 .label > p {
-    width: 100%;
+    width: 75%;
     padding: 0;
-    margin: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 16px;
+    padding-bottom: 2.5%;
+    text-align: center;
+    margin: 0 auto;
+    height: auto;
 }
 
 .label > h1 {
     font-family: 'Raleway', sans-serif;
     letter-spacing: normal;
-    font-weight: 300;
-    font-size: 18px;
-    text-align: right;
-    padding: 0;
-    margin: 0;
-}
-
-.label > a.button {
-    font-family: 'Avenir', sans-serif;
-    letter-spacing: normal;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 20px;
     text-align: center;
-    text-decoration: none;
-    font-weight: 300;
-    padding: 1%;
-    margin: 0;
-    border: 2px solid #404040;
-    border-radius: 0;
-    text-transform: none;
-    transition: all 0.3s;
-}
-
-.label > a.button:hover {
-    transition: all 0.3s;
-    background-color: #404040;
-    color: #FAFAFA;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 1.5%;
+    margin: 0 auto;
 }
 
 .stop-scrolling {
@@ -619,7 +610,9 @@ span {
     }
 
     .label {
-        right: -50%;
+        width: 50%;
+        padding: 2.5%;
+        padding-bottom: 1%;
     }
     
     .footer-left {

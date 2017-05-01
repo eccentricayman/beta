@@ -220,13 +220,36 @@
                 <div class="six columns project">
                     <div class="label">
                         <h1>Stuyvesant Student Union</h1>
-                        <br>
                         <p>The official website of Stuyvesant High School's Student Union.</p>
                         <a href="http://stuysu.org" class="button">Visit <i class="fa fa-angle-right"></i></a>
                     </div>
                     <img src="images/project1.png" id="project1" class="u-max-full-width" alt="stuyvesant-student-union" />
                 </div>
                 <div class="six columns project">
+                        <div class="label">
+                            <h1>The Daily Greez</h1>
+                            <p>A journalism site made for a mock election in an AP Gov. class.</p>
+                            <a href="https://thedailygreez.github.io" class="button">Visit <i class="fa fa-angle-right"></i></a>
+                        </div>                    
+                    <img src="images/project4.png" id="project4" class="u-max-full-width" alt="the-daily-greez" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="six columns project">
+                    <div class="label">
+                        <h1>Stuyvesant Freshman Caucus</h1>
+                        <p>The website for Stuyvesant High School's current Freshman Caucus.</p>
+                        <a href="http://freshman.stuysu.org" class="button">Visit <i class="fa fa-angle-right"></i></a>
+                    </div>
+                    <img src="images/project6.png" id="project6" class="u-max-full-width" alt="stuyvesant-freshman-caucus" />
+                </div>
+                <div class="six columns project">
+                    <div class="label">
+                        <h1>Stuyvesant Sophomore Caucus</h1>
+                        <p>The website for Stuyvesant High School's current Sophomore Caucus.</p>
+                        <a href="http://sophomore.stuysu.org" class="button">Visit <i class="fa fa-angle-right"></i></a>
+                    </div>
                     <img src="images/project2.png" id="project2" class="u-max-full-width" alt="stuyvesant-sophomore-caucus" />
                 </div>
             </div>
@@ -234,18 +257,19 @@
             <div class="row">
                 <div class="six columns double-project">
                     <div class="project project-half">
+                        <div class="label">
+                            <h1>Millenium Falcon</h1>
+                            <p>A 3D drawing of the Millenium Falcon from Star Wars made in AutoCAD 2017.</p>
+                            <a href="https://github.com/eccentricayman/TD10-Projects/blob/master/Ayman%20Ahmed%20Final%20Project%20P10.dwg" class="button">Visit <i class="fa fa-angle-right"></i></a>
+                        </div>
                         <img src="images/project3.png" id="project3" class="u-max-full-width" alt="millenium-falcon" />
                     </div>
                     <div class="project project-half">
-                        <img src="images/project3.png" id="project3" class="u-max-full-width" alt="millenium-falcon" />
+                        <img src="" id="" class="u-max-full-width" alt="" />
                     </div>
                 </div>
-                <div class="six columns project">
-                    <img src="images/project4.png" id="project4" class="u-max-full-width" alt="the-daily-greez" />
-                </div>
+                
             </div>
-            
-        </div>
         
         <div class="footer-wrapper" id="contact">
 
@@ -374,14 +398,14 @@
              var label = this.querySelector(".label");
              var rightSide = getPosition(div).x >= $(window).width() / 2;
 
-             label.style.opacity = 1;
-             $(label).animate({'right': 0}, 500);
-
-             div.style.transition = "all 0.5s";
-             image.style.transition = "all 0.5s";
+             div.style.transition = "all 0.3s";
+             image.style.transition = "all 0.3s";
 
              image.style.padding = 0;
              image.style.margin = "0 auto";
+
+             div.style.position = "fixed";
+             
              if ( $(window).width() > $(window).height()) {
                  if (image.naturalWidth > image.naturalHeight) {
                      image.style.width = "100%";
@@ -413,7 +437,6 @@
              
              //well over 9000
              div.style.zIndex = "9999999";
-             div.style.position = "fixed";
              div.style.padding = 0;
              div.style.margin = 0;
              div.style.width = "100%";
@@ -429,6 +452,8 @@
              $("body").addClass("stop-scrolling");
              div.style.background = "rgba(0, 0, 0, 0.75)";
 
+             $(label).slideDown();
+
              this.removeEventListener("click", makeLarge);
              this.addEventListener("click", makeSmall);
          }
@@ -439,12 +464,7 @@
              var label = this.querySelector(".label");
              var rightSide = getPosition(div).x >= $(window).width() / 2;
 
-             if ($(window).width() >= 750) {
-                 $(label).animate({'right': '-25%', 'opacity': 0}, 500);
-             }
-             else {
-                 $(label).animate({'right': '-50%', 'opacity': 0}, 500);
-             }
+             $(label).slideUp();
              
              div.style.transition = "all 0.5s";
              image.style.transition = "all 0.5s";
