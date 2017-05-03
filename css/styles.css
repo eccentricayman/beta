@@ -229,7 +229,6 @@ span {
 
 .footer {
     background-color: #EEEEEE;
-    font-size: 16px;
     padding: 5% 7.5% 0 7.5%;
     color: rgb(65, 65, 65);
 }
@@ -242,15 +241,29 @@ span {
     text-align: center;
 }
 
+.footer-left > h1, .footer-right > h1 {
+    padding: 0;
+    margin: 0 0 1.5% 0;
+    font-size: 1.25em;
+    letter-spacing: 0.1px;
+    color: #404040;
+    text-decoration: underline;
+    font-family: 'Avenir';
+    font-weight: 500;
+}
+
 .footer-left > p, .footer-right > p {
     padding: 0;
-    margin: 0 0 1% 0;
+    margin: 0 0 1.5% 0;
+    font-size: 1.25em;
 }
 
 .footer-link {
     color: #777777;
     text-decoration: none;
     transition: 0.5s color;
+    margin-bottom: 1.5%;
+    font-size: 1.25em;
 }
 
 .footer-link:hover {
@@ -263,6 +276,7 @@ span {
     text-align: center;
     background-color: #EEEEEE;
     padding-top: 5%;
+    font-size: 1em;
 }
 
 .copyright > p {
@@ -621,6 +635,10 @@ span {
 
     .footer-right {
         text-align: right;
+    }
+
+    .footer-left > h1, .footer-right > h1, .footer-left > p, .footer-right > p, .footer-link {
+        font-size: 1.1em;
     }
 
     .copyright {
